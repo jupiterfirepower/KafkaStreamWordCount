@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="kstreamwordcount-assembly-0.1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/kstreamwordcount/target/scala-2.12/kstreamwordcount-assembly-0.1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

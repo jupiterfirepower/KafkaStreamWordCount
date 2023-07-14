@@ -1,0 +1,48 @@
+https://kafka.apache.org/downloads
+
+https://downloads.apache.org/kafka/3.5.0/kafka_2.13-3.5.0.tgz
+
+# extract
+tar -xzf kafka_2.13-3.3.1.tgz -C ~/KAFKA/kafka_2.13-3.5.0/
+
+cd ~/KAFKA/kafka_2.13-3.5.0/
+
+## Start Zookeeper and Kafka Services
+
+# Start the ZooKeeper service
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start the Kafka broker service
+bin/kafka-server-start.sh config/server.properties
+
+--------------------------------------------------------------------------------------------
+
+# List topics to verify that the services are running. This command should return no results
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+
+## Create a Topic with Apache Kafka
+# Create the wcount-... topics
+bin/kafka-topics.sh --create --topic wcount-input-topic --bootstrap-server localhost:9092
+bin/kafka-topics.sh --create --topic wcount-output-topic --bootstrap-server localhost:9092
+
+# List the topics again
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic wcount-input-topic
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
+--topic wcount-output-topic \
+--from-beginning \
+--formatter kafka.tools.DefaultMessageFormatter \
+--property print.key=true \
+--property print.value=true \
+--property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
+--property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+
+--------------------------------------------------------------------------------------------
+
+bin/kafka-console-consumer.sh --topic pet-adoptions --from-beginning --bootstrap-server localhost:9092
+Navigate back to the terminal instance where you have been running the topic commands on the cluster and start the console producer client.
+
+bin/kafka-console-producer.sh --topic pet-adoptions --bootstrap-server localhost:9092

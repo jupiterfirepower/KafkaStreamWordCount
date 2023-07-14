@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+ kafka:
+    image: moeenz/docker-kafka-kraft:latest
+    restart: always
+    ports:
+      - "9092:9092"
+    environment:
+      - KRAFT_CONTAINER_HOST_NAME=kafka
+      - KRAFT_CREATE_TOPICS=wcount-input-topic,wcount-output-topic,topic-c
+      - KRAFT_PARTITIONS_PER_TOPIC=3
