@@ -1423,3 +1423,6 @@ INFO: Schema "PUBLIC" is up to date. No migration necessary.
 2023.07.15 14:00:20 WARN  no build target for: /home/jupiter/WORK/PROJECTS/kafkastreamswordcount/kstreamwordcount/build.sbt
 2023.07.15 14:00:23 INFO  no build target found for /home/jupiter/WORK/PROJECTS/kafkastreamswordcount/kstreamwordcount/build.sbt. Using presentation compiler with project's scala-library version: 3.2.2
 2023.07.15 14:00:24 INFO  time: code lens generation in 3.82s
+2023.07.15 14:57:55 INFO  Shutting down server
+2023.07.15 14:57:55 INFO  shutting down Metals
+2023.07.15 14:57:55 INFO  Exiting server

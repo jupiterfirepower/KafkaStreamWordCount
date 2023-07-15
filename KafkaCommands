@@ -3,7 +3,7 @@ https://kafka.apache.org/downloads
 https://downloads.apache.org/kafka/3.5.0/kafka_2.13-3.5.0.tgz
 
 # extract
-tar -xzf kafka_2.13-3.3.1.tgz -C ~/KAFKA/kafka_2.13-3.5.0/
+tar -xzf kafka_2.13-3.5.0.tgz -C ~/KAFKA/kafka_2.13-3.5.0/
 
 cd ~/KAFKA/kafka_2.13-3.5.0/
 

@@ -48,6 +48,16 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \<br>
 --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer<br>
 <br>
 Type sentenses in producer.<br>
+<p>
+<img src="/img/Producer.png"  title="Kafka Producer">
+</p><br>
+<p>
+<img src="/img/AppWordCountStreaming.png"  title="Single Source Shortest Path (SSSP)">
+</p><br>
+<p>
+<img src="/img/Consumer.png"  title="Kafka Consumer">
+</p>
+<br>
 
 
 
