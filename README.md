@@ -38,7 +38,7 @@ sbt assembly<br>
 java -jar target/scala2.12/kstreamwordcount-assembly-0.1.0-SNAPSHOT.jar<br>
 <br>
 # Run Consumer.
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \<br>
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \\<br>
 --topic wcount-output-topic \<br>
 --from-beginning \<br>
 --formatter kafka.tools.DefaultMessageFormatter \<br>
