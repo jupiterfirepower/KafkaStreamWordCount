@@ -39,12 +39,12 @@ java -jar target/scala2.12/kstreamwordcount-assembly-0.1.0-SNAPSHOT.jar<br>
 <br>
 # Run Consumer.
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \\<br>
---topic wcount-output-topic \<br>
---from-beginning \<br>
---formatter kafka.tools.DefaultMessageFormatter \<br>
---property print.key=true \<br>
---property print.value=true \<br>
---property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \<br>
+--topic wcount-output-topic \\<br>
+--from-beginning \\<br>
+--formatter kafka.tools.DefaultMessageFormatter \\<br>
+--property print.key=true \\<br>
+--property print.value=true \\<br>
+--property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \\<br>
 --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer<br>
 <br>
 Type sentenses in producer.<br>
